@@ -39,6 +39,7 @@ paths = {
         'pred_5folds': 'data/rf/predictions_5folds.csv',
         'models': [f'data/rf/models/fold{fold+1}.joblib' for fold in range(5)],
         'shap_fi': 'data/rf/shap_feature_importance.csv',
+        'feature_importance': 'data/rf/feature_importance.csv'
     },
     'svm': {
         'best_params': 'data/svm/best_params.json',

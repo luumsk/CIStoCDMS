@@ -1,0 +1,7 @@
+{
+    "C": 26.073041770026837,
+    "penalty": "l1",
+    "max_iter": 994,
+    "random_state": 42,
+    "solver": "liblinear"
+}

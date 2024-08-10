@@ -1,0 +1,9 @@
+{
+    "C": 115.15005747245534,
+    "kernel": "poly",
+    "gamma": "scale",
+    "class_weight": "balanced",
+    "degree": 2,
+    "probability": true,
+    "random_state": 42
+}

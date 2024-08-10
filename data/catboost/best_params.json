@@ -1,0 +1,13 @@
+{
+    "iterations": 1462,
+    "depth": 6,
+    "learning_rate": 0.4854761821403504,
+    "random_strength": 12,
+    "bagging_temperature": 0.3456894298321191,
+    "border_count": 1244,
+    "l2_leaf_reg": 19,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 42,
+    "verbose": false
+}

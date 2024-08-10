@@ -138,7 +138,7 @@ class BaseTrainer:
     def _print_mean_metrics(mean_metrics):
         print('-' * 30)
         for key, value in mean_metrics.items():
-            print(f'\t- MEAN {key.upper()}: {value:.4f}')
+            print(f'\t- {key.upper()}: {value:.4f}')
 
 
 class CatBoostTrainer(BaseTrainer):

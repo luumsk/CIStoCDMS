@@ -1,0 +1,15 @@
+{
+    "lambda": 0.9659961779841149,
+    "subsample": 0.9793887594776909,
+    "colsample_bytree": 0.8923767054548004,
+    "max_depth": 2,
+    "alpha": 0.117627077086931,
+    "eta": 0.42605553729825163,
+    "gamma": 0.48427553570158555,
+    "verbosity": 0,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "booster": "gbtree",
+    "grow_policy": "depthwise"
+
+}

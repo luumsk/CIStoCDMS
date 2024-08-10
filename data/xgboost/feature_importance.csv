@@ -1,0 +1,21 @@
+Feature Id,Importances
+Periventricular_MRI,0.24261603
+Oligoclonal_Bands,0.10289528
+Infratentorial_MRI,0.08954857
+LLSSEP,0.055315025
+Gender,0.05518291
+Varicella,0.04741935
+Schooling,0.043077968
+VEP,0.042841576
+ULSSEP,0.038906507
+Breastfeeding,0.03143961
+Mono_Symptomatic,0.031410594
+Symptom_Vision,0.030872459
+Cortical_MRI,0.029499277
+Symptom_Motor,0.026230168
+Symptom_Other,0.025870398
+Symptom_Sensory,0.024978185
+Poly_Symptomatic,0.024107805
+Spinal_Cord_MRI,0.023852643
+Age,0.021734055
+BAEP,0.01220157

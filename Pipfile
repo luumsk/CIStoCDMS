@@ -21,6 +21,7 @@ eli5 = "==0.13.0"
 joblib = "==1.4.2"
 lightgbm = "==4.4.0"
 scipy = "==1.14.0"
+ipykernel = "*"
 
 [dev-packages]
 ipykernel = "==6.29.4"

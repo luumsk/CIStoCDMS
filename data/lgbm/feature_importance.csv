@@ -1,0 +1,21 @@
+Feature Id,Importances
+Age,478.2
+Breastfeeding,221.6
+Schooling,120.6
+Symptom_Motor,120.0
+Symptom_Sensory,106.8
+Mono_Symptomatic,104.4
+ULSSEP,104.2
+Symptom_Other,99.6
+Periventricular_MRI,88.2
+Symptom_Vision,76.0
+Cortical_MRI,63.0
+Infratentorial_MRI,54.4
+LLSSEP,51.4
+Gender,50.2
+Oligoclonal_Bands,43.6
+Varicella,37.6
+Spinal_Cord_MRI,28.4
+Poly_Symptomatic,24.0
+VEP,22.6
+BAEP,0.0

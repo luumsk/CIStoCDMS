@@ -1,0 +1,106 @@
+{
+    "X_train_paths": [
+        "/home/luu/CIStoCDMS/data/train/X_train_fold1.csv",
+        "/home/luu/CIStoCDMS/data/train/X_train_fold2.csv",
+        "/home/luu/CIStoCDMS/data/train/X_train_fold3.csv",
+        "/home/luu/CIStoCDMS/data/train/X_train_fold4.csv",
+        "/home/luu/CIStoCDMS/data/train/X_train_fold5.csv"
+    ],
+    "y_train_paths": [
+        "/home/luu/CIStoCDMS/data/train/y_train_fold1.csv",
+        "/home/luu/CIStoCDMS/data/train/y_train_fold2.csv",
+        "/home/luu/CIStoCDMS/data/train/y_train_fold3.csv",
+        "/home/luu/CIStoCDMS/data/train/y_train_fold4.csv",
+        "/home/luu/CIStoCDMS/data/train/y_train_fold5.csv"
+    ],
+    "X_val_paths": [
+        "/home/luu/CIStoCDMS/data/val/X_val_fold1.csv",
+        "/home/luu/CIStoCDMS/data/val/X_val_fold2.csv",
+        "/home/luu/CIStoCDMS/data/val/X_val_fold3.csv",
+        "/home/luu/CIStoCDMS/data/val/X_val_fold4.csv",
+        "/home/luu/CIStoCDMS/data/val/X_val_fold5.csv"
+    ],
+    "y_val_paths": [
+        "/home/luu/CIStoCDMS/data/val/y_val_fold1.csv",
+        "/home/luu/CIStoCDMS/data/val/y_val_fold2.csv",
+        "/home/luu/CIStoCDMS/data/val/y_val_fold3.csv",
+        "/home/luu/CIStoCDMS/data/val/y_val_fold4.csv",
+        "/home/luu/CIStoCDMS/data/val/y_val_fold5.csv"
+    ],
+    "catboost": {
+        "best_params": "/home/luu/CIStoCDMS/results/catboost/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/catboost/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/catboost/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/catboost/models/fold1.cbm",
+            "/home/luu/CIStoCDMS/results/catboost/models/fold2.cbm",
+            "/home/luu/CIStoCDMS/results/catboost/models/fold3.cbm",
+            "/home/luu/CIStoCDMS/results/catboost/models/fold4.cbm",
+            "/home/luu/CIStoCDMS/results/catboost/models/fold5.cbm"
+        ],
+        "feature_importance": "/home/luu/CIStoCDMS/results/catboost/feature_importance.csv"
+    },
+    "xgboost": {
+        "best_params": "/home/luu/CIStoCDMS/results/xgboost/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/xgboost/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/xgboost/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/xgboost/models/fold1.json",
+            "/home/luu/CIStoCDMS/results/xgboost/models/fold2.json",
+            "/home/luu/CIStoCDMS/results/xgboost/models/fold3.json",
+            "/home/luu/CIStoCDMS/results/xgboost/models/fold4.json",
+            "/home/luu/CIStoCDMS/results/xgboost/models/fold5.json"
+        ],
+        "feature_importance": "/home/luu/CIStoCDMS/results/xgboost/feature_importance.csv"
+    },
+    "lgbm": {
+        "best_params": "/home/luu/CIStoCDMS/results/lgbm/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/lgbm/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/lgbm/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/lgbm/models/fold1.joblib",
+            "/home/luu/CIStoCDMS/results/lgbm/models/fold2.joblib",
+            "/home/luu/CIStoCDMS/results/lgbm/models/fold3.joblib",
+            "/home/luu/CIStoCDMS/results/lgbm/models/fold4.joblib",
+            "/home/luu/CIStoCDMS/results/lgbm/models/fold5.joblib"
+        ],
+        "feature_importance": "/home/luu/CIStoCDMS/results/lgbm/feature_importance.csv"
+    },
+    "rf": {
+        "best_params": "/home/luu/CIStoCDMS/results/rf/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/rf/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/rf/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/rf/models/fold1.joblib",
+            "/home/luu/CIStoCDMS/results/rf/models/fold2.joblib",
+            "/home/luu/CIStoCDMS/results/rf/models/fold3.joblib",
+            "/home/luu/CIStoCDMS/results/rf/models/fold4.joblib",
+            "/home/luu/CIStoCDMS/results/rf/models/fold5.joblib"
+        ],
+        "feature_importance": "/home/luu/CIStoCDMS/results/rf/feature_importance.csv"
+    },
+    "svm": {
+        "best_params": "/home/luu/CIStoCDMS/results/svm/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/svm/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/svm/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/svm/models/fold1.joblib",
+            "/home/luu/CIStoCDMS/results/svm/models/fold2.joblib",
+            "/home/luu/CIStoCDMS/results/svm/models/fold3.joblib",
+            "/home/luu/CIStoCDMS/results/svm/models/fold4.joblib",
+            "/home/luu/CIStoCDMS/results/svm/models/fold5.joblib"
+        ]
+    },
+    "lr": {
+        "best_params": "/home/luu/CIStoCDMS/results/lr/best_params.json",
+        "pred_5folds": "/home/luu/CIStoCDMS/results/lr/predictions_5folds.csv",
+        "shap_fi": "/home/luu/CIStoCDMS/results/lr/shap_feature_importance.csv",
+        "models": [
+            "/home/luu/CIStoCDMS/results/lr/models/fold1.joblib",
+            "/home/luu/CIStoCDMS/results/lr/models/fold2.joblib",
+            "/home/luu/CIStoCDMS/results/lr/models/fold3.joblib",
+            "/home/luu/CIStoCDMS/results/lr/models/fold4.joblib",
+            "/home/luu/CIStoCDMS/results/lr/models/fold5.joblib"
+        ]
+    }
+}

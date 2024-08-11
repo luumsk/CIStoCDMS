@@ -5,6 +5,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from catboost import CatBoostClassifier
 from xgboost import XGBClassifier
 from .config import *
+from .paths import INPUT_PATH, X_train_paths, y_train_paths, X_val_paths, y_val_paths, paths
 from .helpers import load_json, load_joblib
 
 
@@ -42,49 +43,47 @@ def split(X, y, n_folds=5):
         random_state=RANDOM_STATE
     )
     
-    fold = 1
-
-    for train_idx, val_idx in cv.split(X, y):
+    for fold, (train_idx, val_idx) in enumerate(cv.split(X, y)):
         X_train, y_train = X.iloc[train_idx], y.iloc[train_idx]
         X_val  , y_val   = X.iloc[val_idx]  , y.iloc[val_idx]
 
-        # Save fold data
-        X_train.to_csv(f'data/train/X_train_fold{fold}.csv', index=False)
-        y_train.to_csv(f'data/train/y_train_fold{fold}.csv', index=False)
-        X_val.to_csv(f'data/val/X_val_fold{fold}.csv', index=False)
-        y_val.to_csv(f'data/val/y_val_fold{fold}.csv', index=False)
-
-        fold += 1
+        # Save fold data using predefined paths
+        X_train.to_csv(X_train_paths[fold], index=False)
+        y_train.to_csv(y_train_paths[fold], index=False)
+        X_val.to_csv(X_val_paths[fold], index=False)
+        y_val.to_csv(y_val_paths[fold], index=False)
 
 def load_data_fold(fold):
-    X_train = pd.read_csv(f'data/train/X_train_fold{fold}.csv')
-    y_train = pd.read_csv(f'data/train/y_train_fold{fold}.csv')
-    X_val   = pd.read_csv(f'data/val/X_val_fold{fold}.csv')
-    y_val   = pd.read_csv(f'data/val/y_val_fold{fold}.csv')
+    X_train = pd.read_csv(X_train_paths[fold])
+    y_train = pd.read_csv(y_train_paths[fold])
+    X_val   = pd.read_csv(X_val_paths[fold])
+    y_val   = pd.read_csv(y_val_paths[fold])
     return X_train, y_train, X_val, y_val
 
-def load_model_fold(fold, model_name='catboost'):
+def load_model_fold(fold, model_name):
+    if model_name not in MODEL_NAMES:
+        raise ValueError("Incorrect model_name. Only support one of: ['catboost', 'xgboost', 'lgbm', 'rf', 'svm', 'lr']")
+
+    model_paths = paths.get(model_name, {}).get('models')    
+
+    if not model_paths:
+        raise ValueError(f'Model paths not found for model {model_name}')
+
+    model_path = model_paths[fold]
+    model = None
+
     if model_name == 'catboost':
         model = CatBoostClassifier()
-        model.load_model(f'results/catboost/models/fold{fold}.cbm')
-        return model
+        model.load_model(model_path)
     elif model_name == 'xgboost':
         model = XGBClassifier()
-        model.load_model(f'results/xgboost/models/fold{fold}.json')
-        return model
+        model.load_model(model_path)
     elif model_name in ['rf', 'lgbm', 'svm', 'lr']:
-        model_path = f'results/{model_name}/models/fold{fold}.joblib'
-        return load_joblib(model_path)
-    else:
-        raise ValueError("Incorrect model_name. Only support one of: ['catboost', 'xgboost', 'lgbm', 'rf', 'svm', 'lr']")
+        model = load_joblib(model_path)
 
-def load_best_params(model_name='catboost'):
-    if model_name in ['catboost', 'xgboost', 'lgbm', 'rf', 'svm', 'lr']:
-        return load_json(paths[model_name]['best_params'])
-    else:
-        raise ValueError("Incorrect model_name. Only support one of: ['catboost', 'xgboost', 'lgbm', 'rf', 'svm', 'lr']")
+    return model
+
         
-
 class BasicPreprocessor:
     def __init__(self):
         # Mapping of symptoms

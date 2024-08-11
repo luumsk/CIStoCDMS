@@ -16,11 +16,15 @@ y_train_paths = [os.path.join(train_data_dir, f'y_train_fold{fold+1}.csv') for f
 X_val_paths   = [os.path.join(val_data_dir  , f'X_val_fold{fold+1}.csv')   for fold in range(5)]
 y_val_paths   = [os.path.join(val_data_dir  , f'y_val_fold{fold+1}.csv')   for fold in range(5)]
 
+# Path for metrics
+metric_path = os.path.join(project_root, 'results', 'metrics.json')
+
 paths.update({
     'X_train_paths': X_train_paths,
     'y_train_paths': y_train_paths,
     'X_val_paths'  : X_val_paths,
     'y_val_paths'  : y_val_paths,
+    'metrics'      : metric_path,
 })
 
 # Model paths

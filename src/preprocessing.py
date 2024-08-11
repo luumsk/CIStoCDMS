@@ -66,14 +66,14 @@ def load_data_fold(fold):
 def load_model_fold(fold, model_name='catboost'):
     if model_name == 'catboost':
         model = CatBoostClassifier()
-        model.load_model(f'data/catboost/models/fold{fold}.cbm')
+        model.load_model(f'results/catboost/models/fold{fold}.cbm')
         return model
     elif model_name == 'xgboost':
         model = XGBClassifier()
-        model.load_model(f'data/xgboost/models/fold{fold}.json')
+        model.load_model(f'results/xgboost/models/fold{fold}.json')
         return model
     elif model_name in ['rf', 'lgbm', 'svm', 'lr']:
-        model_path = f'data/{model_name}/models/fold{fold}.joblib'
+        model_path = f'results/{model_name}/models/fold{fold}.joblib'
         return load_joblib(model_path)
     else:
         raise ValueError("Incorrect model_name. Only support one of: ['catboost', 'xgboost', 'lgbm', 'rf', 'svm', 'lr']")

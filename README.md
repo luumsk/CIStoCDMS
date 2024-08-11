@@ -25,6 +25,14 @@ This study leverages advanced machine learning models to predict the progression
 - **Clinical Implications:** 
   - The findings underscore the potential of machine learning as a tool for early identification of high-risk CIS patients, potentially guiding early intervention strategies to improve patient outcomes.
 
+## Repository Structure
+
+- `data/`: Contains raw and split data files.
+- `notebooks/`: Jupyter Notebooks for data exploration, model training, and analysis.
+- `src/`: Python scripts for preprocessing, feature engineering, and model evaluation.
+- `results/`: Contains output from model evaluations, including metrics and visualizations.
+- `Pipfile`: Dependency management file for setting up the project environment.
+- `Pipfile.lock`: Lock file to ensure a consistent environment across different setups.
 
 ## Setup Instructions
 

@@ -28,15 +28,14 @@ This study leverages advanced machine learning models to predict the progression
 ## Repository Structure
 
 - `data/`: Contains raw and split data files.
+- `img/`: Containing images
 - `notebooks/`: Jupyter Notebooks for data exploration, model training, and analysis.
-- `src/`: Python scripts for preprocessing, feature engineering, and model evaluation.
-- `results/`: Contains output from model evaluations, including metrics and visualizations.
+- `results/`: Contains trained models.
+- `src/`: Python scripts for preprocessing, training, model evaluation, and visualization.
 - `Pipfile`: Dependency management file for setting up the project environment.
 - `Pipfile.lock`: Lock file to ensure a consistent environment across different setups.
 
 ## Setup Instructions
-
-Follow these steps to set up the project environment:
 
 1. **Clone the repository:**
    ```bash
@@ -62,7 +61,6 @@ Follow these steps to set up the project environment:
    ```bash
    jupyter notebook <notebook_filename>.ipynb
    ```
-
 
 We welcome contributions! Please feel free to open issues or submit pull requests. For any questions or support, contact us at `khue.luu@g.nsu.ru`.
 

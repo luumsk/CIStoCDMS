@@ -19,12 +19,18 @@ y_val_paths   = [os.path.join(val_data_dir  , f'y_val_fold{fold+1}.csv')   for f
 # Path for metrics
 metric_path = os.path.join(project_root, 'results', 'metrics.json')
 
+# SHAP values
+shap_values_path = os.path.join(project_root, 'results', 'shap_values.pkl')
+shap_interaction_values_path = os.path.join(project_root, 'results', 'shap_interaction_values.pkl')
+
 paths.update({
     'X_train_paths': X_train_paths,
     'y_train_paths': y_train_paths,
-    'X_val_paths'  : X_val_paths,
-    'y_val_paths'  : y_val_paths,
-    'metrics'      : metric_path,
+    'X_val_paths': X_val_paths,
+    'y_val_paths': y_val_paths,
+    'metric_path': metric_path,
+    'shap_values_path': shap_values_path,
+    'shap_interaction_values_path': shap_interaction_values_path
 })
 
 # Model paths

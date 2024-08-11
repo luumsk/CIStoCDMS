@@ -2,38 +2,23 @@ import os
 from src.config import MODEL_NAMES
 
 # Project root directory
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-paths = {}
-
-# Data directories
-INPUT_PATH     = os.path.join(project_root, 'data', 'conversion_predictors_of_clinically_isolated_syndrome_to_multiple_sclerosis.csv')
+project_root   = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 train_data_dir = os.path.join(project_root, 'data', 'train')
 val_data_dir   = os.path.join(project_root, 'data', 'val')
 
-# Paths for fold files
-X_train_paths = [os.path.join(train_data_dir, f'X_train_fold{fold+1}.csv') for fold in range(5)]
-y_train_paths = [os.path.join(train_data_dir, f'y_train_fold{fold+1}.csv') for fold in range(5)]
-X_val_paths   = [os.path.join(val_data_dir  , f'X_val_fold{fold+1}.csv')   for fold in range(5)]
-y_val_paths   = [os.path.join(val_data_dir  , f'y_val_fold{fold+1}.csv')   for fold in range(5)]
+# Paths dictionary
+paths = {
+    'input_path'   : os.path.join(project_root, 'data', 'conversion_predictors_of_clinically_isolated_syndrome_to_multiple_sclerosis.csv'),
+    'X_train_paths': [os.path.join(train_data_dir, f'X_train_fold{fold+1}.csv') for fold in range(5)],
+    'y_train_paths': [os.path.join(train_data_dir, f'y_train_fold{fold+1}.csv') for fold in range(5)],
+    'X_val_paths'  : [os.path.join(val_data_dir  , f'X_val_fold{fold+1}.csv')   for fold in range(5)],
+    'y_val_paths'  : [os.path.join(val_data_dir  , f'y_val_fold{fold+1}.csv')   for fold in range(5)],
+    'metric_path'  : os.path.join(project_root, 'results', 'metrics.json'),
+    'shap_values_path': os.path.join(project_root, 'results', 'shap_values.pkl'),
+    'shap_interaction_values_path': os.path.join(project_root, 'results', 'shap_interaction_values.pkl')
+}
 
-# Path for metrics
-metric_path = os.path.join(project_root, 'results', 'metrics.json')
-
-# SHAP values
-shap_values_path = os.path.join(project_root, 'results', 'shap_values.pkl')
-shap_interaction_values_path = os.path.join(project_root, 'results', 'shap_interaction_values.pkl')
-
-paths.update({
-    'X_train_paths': X_train_paths,
-    'y_train_paths': y_train_paths,
-    'X_val_paths': X_val_paths,
-    'y_val_paths': y_val_paths,
-    'metric_path': metric_path,
-    'shap_values_path': shap_values_path,
-    'shap_interaction_values_path': shap_interaction_values_path
-})
-
-# Model paths
+# Add model paths to path dictionary
 for model_name in MODEL_NAMES:
     model_dir = os.path.join(project_root, 'results', model_name)
     model_paths = {

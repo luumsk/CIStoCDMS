@@ -5,13 +5,14 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from catboost import CatBoostClassifier
 from xgboost import XGBClassifier
 from .config import *
-from .paths import INPUT_PATH, X_train_paths, y_train_paths, X_val_paths, y_val_paths, paths
-from .helpers import load_json, load_joblib
+from .paths import paths
+from .helpers import load_joblib
 
 
 np.random.seed(RANDOM_STATE)
 
-def get_df(path=INPUT_PATH, edss=False, mri=False):
+def get_df(path=None, edss=False, mri=False):
+    path = paths.get('input_path') if path is None else path
     df = pd.read_csv(path)
 
     cols_to_drop = []
@@ -48,16 +49,16 @@ def split(X, y, n_folds=5):
         X_val  , y_val   = X.iloc[val_idx]  , y.iloc[val_idx]
 
         # Save fold data using predefined paths
-        X_train.to_csv(X_train_paths[fold], index=False)
-        y_train.to_csv(y_train_paths[fold], index=False)
-        X_val.to_csv(X_val_paths[fold], index=False)
-        y_val.to_csv(y_val_paths[fold], index=False)
+        X_train.to_csv(paths.get('X_train_paths')[fold], index=False)
+        y_train.to_csv(paths.get('y_train_paths')[fold], index=False)
+        X_val.to_csv(paths.get('X_val_paths')[fold], index=False)
+        y_val.to_csv(paths.get('y_val_paths')[fold], index=False)
 
 def load_data_fold(fold):
-    X_train = pd.read_csv(X_train_paths[fold])
-    y_train = pd.read_csv(y_train_paths[fold])
-    X_val   = pd.read_csv(X_val_paths[fold])
-    y_val   = pd.read_csv(y_val_paths[fold])
+    X_train = pd.read_csv(paths.get('X_train_paths')[fold])
+    y_train = pd.read_csv(paths.get('y_train_paths')[fold])
+    X_val   = pd.read_csv(paths.get('X_val_paths')[fold])
+    y_val   = pd.read_csv(paths.get('y_val_paths')[fold])
     return X_train, y_train, X_val, y_val
 
 def load_model_fold(fold, model_name):

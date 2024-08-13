@@ -13,7 +13,6 @@ def calculate_metrics(y_true, y_pred, y_pred_proba):
     cm = confusion_matrix(y_true, y_pred)
     tn, fp, fn, tp = cm.ravel()
     specificity = tn / (tn + fp) if (tn + fp) > 0 else 0
-    npv = tn / (tn + fn) if (tn + fn) > 0 else 0
     
     return {
         'accuracy': accuracy_score(y_true, y_pred),

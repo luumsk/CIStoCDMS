@@ -24,6 +24,7 @@ scipy = "==1.14.0"
 ipykernel = "*"
 statsmodels = "*"
 pyroc = "*"
+scikit-posthocs = "*"
 
 [dev-packages]
 ipykernel = "==6.29.4"

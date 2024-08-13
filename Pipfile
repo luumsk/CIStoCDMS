@@ -23,6 +23,7 @@ lightgbm = "==4.4.0"
 scipy = "==1.14.0"
 ipykernel = "*"
 statsmodels = "*"
+pyroc = "*"
 
 [dev-packages]
 ipykernel = "==6.29.4"

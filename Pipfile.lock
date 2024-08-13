@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2b7289ecb29ce2031ab6e7545494901224081a63ba12331b0e410c748fbba2bf"
+            "sha256": "b55f9b501d2decb7287ba2580ee532cfafc123aa9a25f009eb169680acf5ae13"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -1514,6 +1514,14 @@
             ],
             "markers": "python_full_version >= '3.6.8'",
             "version": "==3.1.2"
+        },
+        "pyroc": {
+            "hashes": [
+                "sha256:30e6e268bd1e20241b1e0db033eb9e5954efbbec73c1d7485ea8957223a101ad",
+                "sha256:6275bf0afb2e5857e7d23e83cabf6064f740a0bcc667d397f0e6ba93a82b0aaf"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         },
         "python-dateutil": {
             "hashes": [

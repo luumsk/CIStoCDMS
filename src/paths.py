@@ -5,6 +5,7 @@ from src.config import MODEL_NAMES
 project_root   = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 train_data_dir = os.path.join(project_root, 'data', 'train')
 val_data_dir   = os.path.join(project_root, 'data', 'val')
+restul_dir     = os.path.join(project_root, 'results')
 
 # Paths dictionary
 paths = {
@@ -13,12 +14,13 @@ paths = {
     'y_train_paths'   : [os.path.join(train_data_dir, f'y_train_fold{fold+1}.csv') for fold in range(5)],
     'X_val_paths'     : [os.path.join(val_data_dir  , f'X_val_fold{fold+1}.csv')   for fold in range(5)],
     'y_val_paths'     : [os.path.join(val_data_dir  , f'y_val_fold{fold+1}.csv')   for fold in range(5)],
-    'metric_path'     : os.path.join(project_root, 'results', 'metrics.json'),
-    'metric_fold_path': os.path.join(project_root, 'results', 'metrics_fold.json'),
-    'pred_path'       : os.path.join(project_root, 'results', 'preds.json'),
-    'pred_proba_path' : os.path.join(project_root, 'results', 'pred_probas.json'),
-    'shap_values_path': os.path.join(project_root, 'results', 'shap_values.pkl'),
-    'shap_interaction_values_path': os.path.join(project_root, 'results', 'shap_interaction_values.pkl')
+    'metric_path'     : os.path.join(restul_dir, 'metrics.json'),
+    'metric_fold_path': os.path.join(restul_dir, 'metrics_fold.json'),
+    'pred_path'       : os.path.join(restul_dir, 'preds.json'),
+    'pred_proba_path' : os.path.join(restul_dir, 'pred_probas.json'),
+    'shap_values_path': os.path.join(restul_dir, 'shap_values.pkl'),
+    'shap_interaction_values_path' : os.path.join(restul_dir, 'shap_interaction_values.pkl'),
+    'feature_importance_all_models': os.path.join(restul_dir, 'feature_importance_all_models.csv')
 }
 
 # Add model paths to path dictionary

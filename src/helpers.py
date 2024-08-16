@@ -66,4 +66,4 @@ def concatenate_lists(lists):
     result = []
     for x in lists:
         result.extend(x)
-    return result
+    return np.array(result)

@@ -30,8 +30,10 @@ for model_name in MODEL_NAMES:
         'best_params': os.path.join(model_dir, 'best_params.json'),
         'pred_5folds': os.path.join(model_dir, 'predictions_5folds.csv'),
         'shap_fi'    : os.path.join(model_dir, 'shap_feature_importance.csv'),
-        'sv': os.path.join(model_dir, 'sv.json'),
-        'iv': os.path.join(model_dir, 'iv.json')
+        'sv'         : os.path.join(model_dir, 'sv.json'),
+        'iv'         : os.path.join(model_dir, 'iv.json'),
+        'pred'       : os.path.join(model_dir, 'pred.json'),
+        'pred_proba' : os.path.join(model_dir, 'pred_proba.json'),
     }
 
     # Catboost model file ending is .cbm and this classifier has feature importance

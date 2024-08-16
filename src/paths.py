@@ -28,33 +28,23 @@ for model_name in MODEL_NAMES:
     model_dir = os.path.join(project_root, 'results', model_name)
     model_paths = {
         'best_params': os.path.join(model_dir, 'best_params.json'),
-        'pred_5folds': os.path.join(model_dir, 'predictions_5folds.csv'),
-        'shap_fi'    : os.path.join(model_dir, 'shap_feature_importance.csv'),
         'sv'         : os.path.join(model_dir, 'sv.json'),
         'iv'         : os.path.join(model_dir, 'iv.json'),
         'pred'       : os.path.join(model_dir, 'pred.json'),
         'pred_proba' : os.path.join(model_dir, 'pred_proba.json'),
     }
 
-    # Catboost model file ending is .cbm and this classifier has feature importance
+    # Catboost model file ending is .cbm
     if model_name == 'catboost':
         model_paths.update({
             'models': [os.path.join(model_dir, 'models', f'fold{fold+1}.cbm') for fold in range(5)],
-            'feature_importance': os.path.join(model_dir, 'feature_importance.csv'),
         })
-    # XGBoost model file ending is .json and this classifier has feature importance
+    # XGBoost model file ending is .json
     elif model_name == 'xgboost':
         model_paths.update({
             'models': [os.path.join(model_dir, 'models', f'fold{fold+1}.json') for fold in range(5)],
-            'feature_importance': os.path.join(model_dir, 'feature_importance.csv'),
         })
-    # LGBM and RF model file endings are .joblib and these classifiers have feature importance
-    elif model_name in ['lgbm', 'rf']:
-        model_paths.update({
-            'models': [os.path.join(model_dir, 'models', f'fold{fold+1}.joblib') for fold in range(5)],
-            'feature_importance': os.path.join(model_dir, 'feature_importance.csv'),
-        })
-    # SVM and LR model file ending are .joblib and these classifiers do not have feature importance
+    # LGBM, RF, SVM and LR model file ending are .joblib
     else:
         model_paths.update({
             'models': [os.path.join(model_dir, 'models', f'fold{fold+1}.joblib') for fold in range(5)],

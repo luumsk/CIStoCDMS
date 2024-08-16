@@ -61,3 +61,9 @@ def get_mean_by_key(list_of_dictionaries):
         f'mean_{key}': np.mean(values) for key, values in values_by_key.items()
     }
     return mean_by_key
+
+def concatenate_lists(lists):
+    result = []
+    for x in lists:
+        result.extend(x)
+    return result

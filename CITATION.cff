@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code or results, please cite the article below."
+title: "CIStoCDMS: Discovering predictive features of multiple sclerosis from clinically isolated syndrome with machine learning"
+authors:
+  - family-names: Luu
+    given-names: Minh Sao Khue
+license: MIT
+repository-code: "https://github.com/luumsk/CIStoCDMS"
+preferred-citation:
+  type: article
+  title: "Discovering predictive features of multiple sclerosis from clinically isolated syndrome with machine learning"
+  authors:
+    - family-names: Luu
+      given-names: Minh Sao Khue
+    - family-names: Tuchinov
+      given-names: Bair N.
+    - family-names: Prokaeva
+      given-names: Anna I.
+    - family-names: Korobko
+      given-names: Denis S.
+    - family-names: Malkova
+      given-names: Nadezhda A.
+    - family-names: Tulupov
+      given-names: Andrey A.
+  journal: "Artificial Intelligence in Health"
+  volume: 1
+  issue: 4
+  start: 107
+  end: 122
+  year: 2024
+  doi: "10.36922/aih.4255"
+  url: "https://accscience.com/journal/AIH/1/4/10.36922/aih.4255"

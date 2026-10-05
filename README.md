@@ -174,9 +174,3 @@ This repository is for research purposes only. The models are **not** validated 
 ## Acknowledgements
 
 This research was carried out at the Stream Data Analytics and Machine Learning Laboratory of Novosibirsk State University, together with the International Tomography Center SB RAS and the State Novosibirsk Regional Clinical Hospital.
-
-## Contact
-
-Minh Sao Khue Luu, [khue.luu@g.nsu.ru](mailto:khue.luu@g.nsu.ru)
-
-Questions, issues and pull requests are welcome.

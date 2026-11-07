@@ -1,0 +1,50 @@
+ model_a model_b   cka  cka_null_mean  cka_null_p99  cka_perm_p  patient_spearman_median  patient_spearman_q25  patient_spearman_q75  other_patient_spearman_median  share_same_patient_beats_other
+CatBoost XGBoost 0.837          0.030         0.046       0.001                    0.883                 0.841                 0.919                          0.013                           1.000
+CatBoost    LGBM 0.835          0.026         0.040       0.001                    0.898                 0.843                 0.932                         -0.002                           1.000
+CatBoost      RF 0.729          0.021         0.036       0.001                    0.841                 0.783                 0.889                          0.030                           0.996
+CatBoost     SVM 0.706          0.032         0.044       0.001                    0.820                 0.725                 0.871                          0.011                           0.996
+CatBoost      LR 0.700          0.029         0.044       0.001                    0.798                 0.746                 0.850                         -0.005                           1.000
+ XGBoost    LGBM 0.845          0.026         0.039       0.001                    0.925                 0.879                 0.953                          0.021                           1.000
+ XGBoost      RF 0.786          0.021         0.038       0.001                    0.850                 0.808                 0.888                         -0.014                           0.996
+ XGBoost     SVM 0.807          0.031         0.046       0.001                    0.869                 0.803                 0.918                          0.041                           0.993
+ XGBoost      LR 0.761          0.029         0.043       0.001                    0.829                 0.780                 0.879                          0.017                           1.000
+    LGBM      RF 0.737          0.018         0.037       0.001                    0.890                 0.850                 0.928                          0.050                           1.000
+    LGBM     SVM 0.747          0.027         0.042       0.001                    0.860                 0.740                 0.913                          0.005                           0.989
+    LGBM      LR 0.731          0.025         0.043       0.001                    0.857                 0.811                 0.895                          0.059                           1.000
+      RF     SVM 0.638          0.022         0.035       0.001                    0.767                 0.662                 0.829                          0.012                           0.996
+      RF      LR 0.756          0.020         0.037       0.001                    0.895                 0.832                 0.931                          0.048                           1.000
+     SVM      LR 0.709          0.030         0.043       0.001                    0.830                 0.767                 0.874                         -0.009                           1.000
+   model  share_top1_periventricular  mean_shap_pv_if_1  mean_shap_pv_if_0  n_pv1  n_pv0
+CatBoost                       0.476              2.424             -2.267    138    135
+ XGBoost                       0.451              0.999             -1.235    138    135
+    LGBM                       0.670              1.061             -1.133    138    135
+      RF                       0.689              0.087             -0.093    138    135
+     SVM                       0.311              0.105             -0.109    138    135
+      LR                       0.484              1.185             -1.221    138    135
+{
+  "n_patients": 273,
+  "n_features": 20,
+  "n_model_pairs": 15,
+  "n_perm": 1000,
+  "cka_min": 0.6377364293322311,
+  "cka_median": 0.7465528350055491,
+  "cka_max": 0.8445720166492467,
+  "cka_null_p99_max": 0.046343347158804074,
+  "cka_all_pairs_p_max": 0.000999000999000999,
+  "patient_spearman_median_all_pairs": 0.8541353383458646,
+  "patient_spearman_pairwise_median_range": [
+    0.7672057706904292,
+    0.9251598999502234
+  ],
+  "share_patients_all_six_same_top1": 0.18315018315018314,
+  "share_patients_all_six_top1_is_periventricular": 0.11721611721611722,
+  "share_top1_periventricular_per_model": {
+    "CatBoost": 0.47619047619047616,
+    "XGBoost": 0.45054945054945056,
+    "LGBM": 0.6703296703296703,
+    "RF": 0.6886446886446886,
+    "SVM": 0.31135531135531136,
+    "LR": 0.4835164835164835
+  },
+  "pv_direction_positive_all_models": true
+}

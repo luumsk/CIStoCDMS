@@ -1,0 +1,27 @@
+{
+  "n_patients": 273,
+  "n_features": 20,
+  "n_model_pairs": 15,
+  "n_perm": 1000,
+  "cka_min": 0.6377364293322311,
+  "cka_median": 0.7465528350055491,
+  "cka_max": 0.8445720166492467,
+  "cka_null_p99_max": 0.046343347158804074,
+  "cka_all_pairs_p_max": 0.000999000999000999,
+  "patient_spearman_median_all_pairs": 0.8541353383458646,
+  "patient_spearman_pairwise_median_range": [
+    0.7672057706904292,
+    0.9251598999502234
+  ],
+  "share_patients_all_six_same_top1": 0.18315018315018314,
+  "share_patients_all_six_top1_is_periventricular": 0.11721611721611722,
+  "share_top1_periventricular_per_model": {
+    "CatBoost": 0.47619047619047616,
+    "XGBoost": 0.45054945054945056,
+    "LGBM": 0.6703296703296703,
+    "RF": 0.6886446886446886,
+    "SVM": 0.31135531135531136,
+    "LR": 0.4835164835164835
+  },
+  "pv_direction_positive_all_models": true
+}

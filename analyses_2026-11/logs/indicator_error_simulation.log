@@ -1,0 +1,157 @@
+catboost: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.8995 [0.8995, 0.8995]  sens 0.768  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8910 [0.8780, 0.9025]  sens 0.748  flipped 0.015  converters lost 0.021
+  r=0.2                    AUC 0.8829 [0.8672, 0.8985]  sens 0.728  flipped 0.029  converters lost 0.041
+  r=0.3                    AUC 0.8755 [0.8541, 0.8941]  sens 0.708  flipped 0.043  converters lost 0.062
+  r=0.4                    AUC 0.8689 [0.8495, 0.8881]  sens 0.690  flipped 0.056  converters lost 0.082
+  r=0.5                    AUC 0.8621 [0.8399, 0.8818]  sens 0.670  flipped 0.070  converters lost 0.102
+  r=0.6                    AUC 0.8546 [0.8371, 0.8731]  sens 0.649  flipped 0.085  converters lost 0.124
+  r=0.7                    AUC 0.8478 [0.8308, 0.8669]  sens 0.628  flipped 0.099  converters lost 0.145
+  r=0.8                    AUC 0.8420 [0.8284, 0.8585]  sens 0.609  flipped 0.114  converters lost 0.166
+  r=0.9                    AUC 0.8365 [0.8262, 0.8494]  sens 0.588  flipped 0.128  converters lost 0.187
+  r=1.0                    AUC 0.8319 [0.8319, 0.8319]  sens 0.568  flipped 0.143  converters lost 0.208
+  q=0.1                    AUC 0.8877 [0.8771, 0.8974]  sens 0.776  flipped 0.019  converters lost 0.000
+  q=0.2                    AUC 0.8762 [0.8620, 0.8907]  sens 0.784  flipped 0.038  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8823 [0.8654, 0.8985]  sens 0.727  flipped 0.030  converters lost 0.043
+  MSLesSeg/Tversky         AUC 0.8894 [0.8750, 0.9006]  sens 0.744  flipped 0.018  converters lost 0.025
+  MSLesSeg/FocalTversky    AUC 0.8894 [0.8750, 0.9006]  sens 0.744  flipped 0.018  converters lost 0.025
+  MSLesSeg/CATMIL          AUC 0.8907 [0.8783, 0.9025]  sens 0.748  flipped 0.015  converters lost 0.021
+  3D-MR-MS/DiceCE          AUC 0.8404 [0.8270, 0.8573]  sens 0.604  flipped 0.118  converters lost 0.171
+  3D-MR-MS/Tversky         AUC 0.8402 [0.8270, 0.8578]  sens 0.603  flipped 0.118  converters lost 0.172
+  3D-MR-MS/FocalTversky    AUC 0.8402 [0.8270, 0.8578]  sens 0.603  flipped 0.118  converters lost 0.172
+  3D-MR-MS/CATMIL          AUC 0.8420 [0.8284, 0.8585]  sens 0.609  flipped 0.114  converters lost 0.166
+xgboost: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.9020 [0.9020, 0.9020]  sens 0.848  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8954 [0.8848, 0.9055]  sens 0.819  flipped 0.016  converters lost 0.029
+  r=0.2                    AUC 0.8892 [0.8763, 0.9039]  sens 0.791  flipped 0.032  converters lost 0.057
+  r=0.3                    AUC 0.8835 [0.8688, 0.8994]  sens 0.762  flipped 0.048  converters lost 0.086
+  r=0.4                    AUC 0.8788 [0.8635, 0.8961]  sens 0.737  flipped 0.062  converters lost 0.111
+  r=0.5                    AUC 0.8745 [0.8589, 0.8897]  sens 0.710  flipped 0.077  converters lost 0.138
+  r=0.6                    AUC 0.8699 [0.8565, 0.8850]  sens 0.682  flipped 0.093  converters lost 0.166
+  r=0.7                    AUC 0.8661 [0.8528, 0.8805]  sens 0.653  flipped 0.109  converters lost 0.195
+  r=0.8                    AUC 0.8628 [0.8517, 0.8740]  sens 0.624  flipped 0.126  converters lost 0.224
+  r=0.9                    AUC 0.8601 [0.8503, 0.8708]  sens 0.597  flipped 0.141  converters lost 0.251
+  r=1.0                    AUC 0.8580 [0.8580, 0.8580]  sens 0.568  flipped 0.158  converters lost 0.280
+  q=0.1                    AUC 0.8955 [0.8871, 0.9036]  sens 0.853  flipped 0.014  converters lost 0.000
+  q=0.2                    AUC 0.8891 [0.8765, 0.9010]  sens 0.859  flipped 0.030  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8887 [0.8754, 0.9039]  sens 0.788  flipped 0.034  converters lost 0.060
+  MSLesSeg/Tversky         AUC 0.8942 [0.8838, 0.9055]  sens 0.813  flipped 0.020  converters lost 0.035
+  MSLesSeg/FocalTversky    AUC 0.8942 [0.8838, 0.9055]  sens 0.813  flipped 0.020  converters lost 0.035
+  MSLesSeg/CATMIL          AUC 0.8952 [0.8848, 0.9057]  sens 0.818  flipped 0.017  converters lost 0.030
+  3D-MR-MS/DiceCE          AUC 0.8620 [0.8516, 0.8738]  sens 0.617  flipped 0.130  converters lost 0.231
+  3D-MR-MS/Tversky         AUC 0.8619 [0.8515, 0.8734]  sens 0.615  flipped 0.131  converters lost 0.233
+  3D-MR-MS/FocalTversky    AUC 0.8619 [0.8515, 0.8734]  sens 0.615  flipped 0.131  converters lost 0.233
+  3D-MR-MS/CATMIL          AUC 0.8628 [0.8517, 0.8740]  sens 0.624  flipped 0.126  converters lost 0.224
+lgbm: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.8960 [0.8960, 0.8960]  sens 0.792  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8876 [0.8744, 0.9003]  sens 0.758  flipped 0.021  converters lost 0.034
+  r=0.2                    AUC 0.8799 [0.8589, 0.8985]  sens 0.722  flipped 0.042  converters lost 0.070
+  r=0.3                    AUC 0.8730 [0.8513, 0.8933]  sens 0.687  flipped 0.063  converters lost 0.105
+  r=0.4                    AUC 0.8673 [0.8473, 0.8895]  sens 0.655  flipped 0.082  converters lost 0.137
+  r=0.5                    AUC 0.8619 [0.8426, 0.8838]  sens 0.622  flipped 0.103  converters lost 0.170
+  r=0.6                    AUC 0.8563 [0.8366, 0.8780]  sens 0.587  flipped 0.124  converters lost 0.205
+  r=0.7                    AUC 0.8520 [0.8315, 0.8714]  sens 0.553  flipped 0.145  converters lost 0.239
+  r=0.8                    AUC 0.8488 [0.8316, 0.8673]  sens 0.518  flipped 0.166  converters lost 0.274
+  r=0.9                    AUC 0.8458 [0.8324, 0.8606]  sens 0.483  flipped 0.187  converters lost 0.309
+  r=1.0                    AUC 0.8438 [0.8438, 0.8438]  sens 0.448  flipped 0.209  converters lost 0.344
+  q=0.1                    AUC 0.8869 [0.8760, 0.8973]  sens 0.803  flipped 0.021  converters lost 0.000
+  q=0.2                    AUC 0.8780 [0.8653, 0.8905]  sens 0.814  flipped 0.043  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8794 [0.8578, 0.8978]  sens 0.719  flipped 0.044  converters lost 0.073
+  MSLesSeg/Tversky         AUC 0.8863 [0.8721, 0.9002]  sens 0.751  flipped 0.026  converters lost 0.041
+  MSLesSeg/FocalTversky    AUC 0.8863 [0.8721, 0.9002]  sens 0.751  flipped 0.026  converters lost 0.041
+  MSLesSeg/CATMIL          AUC 0.8874 [0.8744, 0.8999]  sens 0.757  flipped 0.022  converters lost 0.035
+  3D-MR-MS/DiceCE          AUC 0.8479 [0.8319, 0.8650]  sens 0.508  flipped 0.172  converters lost 0.284
+  3D-MR-MS/Tversky         AUC 0.8479 [0.8323, 0.8649]  sens 0.506  flipped 0.173  converters lost 0.286
+  3D-MR-MS/FocalTversky    AUC 0.8479 [0.8323, 0.8649]  sens 0.506  flipped 0.173  converters lost 0.286
+  3D-MR-MS/CATMIL          AUC 0.8488 [0.8316, 0.8673]  sens 0.518  flipped 0.166  converters lost 0.274
+rf: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.9019 [0.9019, 0.9019]  sens 0.840  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8938 [0.8821, 0.9054]  sens 0.808  flipped 0.022  converters lost 0.032
+  r=0.2                    AUC 0.8860 [0.8668, 0.9036]  sens 0.774  flipped 0.045  converters lost 0.066
+  r=0.3                    AUC 0.8786 [0.8588, 0.8976]  sens 0.740  flipped 0.067  converters lost 0.100
+  r=0.4                    AUC 0.8726 [0.8529, 0.8934]  sens 0.709  flipped 0.088  converters lost 0.131
+  r=0.5                    AUC 0.8671 [0.8444, 0.8868]  sens 0.677  flipped 0.110  converters lost 0.163
+  r=0.6                    AUC 0.8613 [0.8424, 0.8803]  sens 0.643  flipped 0.131  converters lost 0.197
+  r=0.7                    AUC 0.8571 [0.8387, 0.8746]  sens 0.610  flipped 0.154  converters lost 0.230
+  r=0.8                    AUC 0.8537 [0.8361, 0.8695]  sens 0.578  flipped 0.176  converters lost 0.262
+  r=0.9                    AUC 0.8508 [0.8372, 0.8649]  sens 0.545  flipped 0.198  converters lost 0.295
+  r=1.0                    AUC 0.8491 [0.8491, 0.8491]  sens 0.512  flipped 0.220  converters lost 0.328
+  q=0.1                    AUC 0.8936 [0.8822, 0.9024]  sens 0.851  flipped 0.020  converters lost 0.000
+  q=0.2                    AUC 0.8853 [0.8717, 0.8954]  sens 0.863  flipped 0.041  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8855 [0.8664, 0.9039]  sens 0.771  flipped 0.047  converters lost 0.069
+  MSLesSeg/Tversky         AUC 0.8923 [0.8800, 0.9040]  sens 0.801  flipped 0.027  converters lost 0.039
+  MSLesSeg/FocalTversky    AUC 0.8923 [0.8800, 0.9040]  sens 0.801  flipped 0.027  converters lost 0.039
+  MSLesSeg/CATMIL          AUC 0.8935 [0.8816, 0.9054]  sens 0.807  flipped 0.023  converters lost 0.033
+  3D-MR-MS/DiceCE          AUC 0.8529 [0.8364, 0.8706]  sens 0.569  flipped 0.181  converters lost 0.271
+  3D-MR-MS/Tversky         AUC 0.8528 [0.8379, 0.8695]  sens 0.567  flipped 0.183  converters lost 0.273
+  3D-MR-MS/FocalTversky    AUC 0.8528 [0.8379, 0.8695]  sens 0.567  flipped 0.183  converters lost 0.273
+  3D-MR-MS/CATMIL          AUC 0.8537 [0.8361, 0.8695]  sens 0.578  flipped 0.176  converters lost 0.262
+svm: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.8831 [0.8831, 0.8831]  sens 0.752  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8758 [0.8649, 0.8858]  sens 0.731  flipped 0.015  converters lost 0.021
+  r=0.2                    AUC 0.8689 [0.8543, 0.8824]  sens 0.711  flipped 0.028  converters lost 0.041
+  r=0.3                    AUC 0.8626 [0.8452, 0.8799]  sens 0.691  flipped 0.041  converters lost 0.061
+  r=0.4                    AUC 0.8572 [0.8388, 0.8747]  sens 0.672  flipped 0.054  converters lost 0.080
+  r=0.5                    AUC 0.8521 [0.8358, 0.8702]  sens 0.653  flipped 0.066  converters lost 0.099
+  r=0.6                    AUC 0.8464 [0.8302, 0.8650]  sens 0.634  flipped 0.080  converters lost 0.118
+  r=0.7                    AUC 0.8422 [0.8259, 0.8611]  sens 0.613  flipped 0.094  converters lost 0.139
+  r=0.8                    AUC 0.8386 [0.8261, 0.8541]  sens 0.593  flipped 0.108  converters lost 0.159
+  r=0.9                    AUC 0.8355 [0.8232, 0.8478]  sens 0.573  flipped 0.121  converters lost 0.179
+  r=1.0                    AUC 0.8333 [0.8333, 0.8333]  sens 0.552  flipped 0.136  converters lost 0.200
+  q=0.1                    AUC 0.8766 [0.8678, 0.8853]  sens 0.760  flipped 0.014  converters lost 0.000
+  q=0.2                    AUC 0.8702 [0.8577, 0.8823]  sens 0.768  flipped 0.028  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8683 [0.8535, 0.8823]  sens 0.709  flipped 0.029  converters lost 0.043
+  MSLesSeg/Tversky         AUC 0.8744 [0.8632, 0.8852]  sens 0.727  flipped 0.017  converters lost 0.025
+  MSLesSeg/FocalTversky    AUC 0.8744 [0.8632, 0.8852]  sens 0.727  flipped 0.017  converters lost 0.025
+  MSLesSeg/CATMIL          AUC 0.8756 [0.8648, 0.8858]  sens 0.730  flipped 0.015  converters lost 0.022
+  3D-MR-MS/DiceCE          AUC 0.8376 [0.8247, 0.8549]  sens 0.588  flipped 0.111  converters lost 0.164
+  3D-MR-MS/Tversky         AUC 0.8376 [0.8254, 0.8542]  sens 0.587  flipped 0.112  converters lost 0.165
+  3D-MR-MS/FocalTversky    AUC 0.8376 [0.8254, 0.8542]  sens 0.587  flipped 0.112  converters lost 0.165
+  3D-MR-MS/CATMIL          AUC 0.8386 [0.8261, 0.8541]  sens 0.593  flipped 0.108  converters lost 0.159
+lr: refit AUC per fold vs stored, max |diff| = 0.0000
+  r=0.0                    AUC 0.8893 [0.8893, 0.8893]  sens 0.792  flipped 0.000  converters lost 0.000
+  r=0.1                    AUC 0.8817 [0.8692, 0.8928]  sens 0.772  flipped 0.014  converters lost 0.020
+  r=0.2                    AUC 0.8746 [0.8592, 0.8892]  sens 0.752  flipped 0.027  converters lost 0.040
+  r=0.3                    AUC 0.8679 [0.8512, 0.8872]  sens 0.733  flipped 0.041  converters lost 0.059
+  r=0.4                    AUC 0.8622 [0.8423, 0.8817]  sens 0.715  flipped 0.053  converters lost 0.077
+  r=0.5                    AUC 0.8566 [0.8384, 0.8750]  sens 0.695  flipped 0.066  converters lost 0.097
+  r=0.6                    AUC 0.8504 [0.8324, 0.8695]  sens 0.674  flipped 0.080  converters lost 0.118
+  r=0.7                    AUC 0.8454 [0.8267, 0.8608]  sens 0.653  flipped 0.094  converters lost 0.139
+  r=0.8                    AUC 0.8416 [0.8274, 0.8565]  sens 0.633  flipped 0.108  converters lost 0.159
+  r=0.9                    AUC 0.8380 [0.8261, 0.8508]  sens 0.613  flipped 0.121  converters lost 0.179
+  r=1.0                    AUC 0.8355 [0.8355, 0.8355]  sens 0.592  flipped 0.136  converters lost 0.200
+  q=0.1                    AUC 0.8820 [0.8735, 0.8902]  sens 0.798  flipped 0.014  converters lost 0.000
+  q=0.2                    AUC 0.8744 [0.8614, 0.8861]  sens 0.803  flipped 0.030  converters lost 0.000
+  MSLesSeg/DiceCE          AUC 0.8741 [0.8568, 0.8896]  sens 0.751  flipped 0.028  converters lost 0.041
+  MSLesSeg/Tversky         AUC 0.8804 [0.8675, 0.8911]  sens 0.768  flipped 0.017  converters lost 0.024
+  MSLesSeg/FocalTversky    AUC 0.8804 [0.8675, 0.8911]  sens 0.768  flipped 0.017  converters lost 0.024
+  MSLesSeg/CATMIL          AUC 0.8815 [0.8691, 0.8928]  sens 0.772  flipped 0.014  converters lost 0.020
+  3D-MR-MS/DiceCE          AUC 0.8407 [0.8278, 0.8558]  sens 0.629  flipped 0.111  converters lost 0.163
+  3D-MR-MS/Tversky         AUC 0.8406 [0.8286, 0.8561]  sens 0.627  flipped 0.112  converters lost 0.165
+  3D-MR-MS/FocalTversky    AUC 0.8406 [0.8286, 0.8561]  sens 0.627  flipped 0.112  converters lost 0.165
+  3D-MR-MS/CATMIL          AUC 0.8416 [0.8274, 0.8565]  sens 0.633  flipped 0.108  converters lost 0.159
+model    CatBoost  XGBoost   LGBM     RF    SVM     LR
+setting                                               
+r=0.0       0.900    0.902  0.896  0.902  0.883  0.889
+r=0.1       0.891    0.895  0.888  0.894  0.876  0.882
+r=0.2       0.883    0.889  0.880  0.886  0.869  0.875
+r=0.3       0.876    0.884  0.873  0.879  0.863  0.868
+r=0.4       0.869    0.879  0.867  0.873  0.857  0.862
+r=0.5       0.862    0.874  0.862  0.867  0.852  0.857
+r=0.6       0.855    0.870  0.856  0.861  0.846  0.850
+r=0.7       0.848    0.866  0.852  0.857  0.842  0.845
+r=0.8       0.842    0.863  0.849  0.854  0.839  0.842
+r=0.9       0.836    0.860  0.846  0.851  0.835  0.838
+r=1.0       0.832    0.858  0.844  0.849  0.833  0.835
+q=0.1       0.888    0.895  0.887  0.894  0.877  0.882
+q=0.2       0.876    0.889  0.878  0.885  0.870  0.874
+model                  CatBoost  XGBoost   LGBM     RF    SVM     LR
+setting                                                             
+MSLesSeg/DiceCE           0.882    0.889  0.879  0.885  0.868  0.874
+MSLesSeg/Tversky          0.889    0.894  0.886  0.892  0.874  0.880
+MSLesSeg/FocalTversky     0.889    0.894  0.886  0.892  0.874  0.880
+MSLesSeg/CATMIL           0.891    0.895  0.887  0.894  0.876  0.882
+3D-MR-MS/DiceCE           0.840    0.862  0.848  0.853  0.838  0.841
+3D-MR-MS/Tversky          0.840    0.862  0.848  0.853  0.838  0.841
+3D-MR-MS/FocalTversky     0.840    0.862  0.848  0.853  0.838  0.841
+3D-MR-MS/CATMIL           0.842    0.863  0.849  0.854  0.839  0.842

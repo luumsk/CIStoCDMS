@@ -1,7 +1,8 @@
 """Figure for the indicator-error simulation (reads ../results/indicator_error_simulation.csv).
 
 Two panels sharing the x-axis (share of positive periventricular indicators missed, r):
-  left  - mean fold AUC; right - share of identified converters no longer identified.
+  left  - mean fold AUC; right - converters newly missed, as a share of ALL converters
+  (= drop in sensitivity at threshold 0.5, in percentage points).
 Line = mean over the six models, band = range over the six models. Points = the
 measured small-lesion miss rates of DiceCE and CATMIL on MSLesSeg and 3D-MR-MS (Ch3),
 placed at the mean over the six models. Palette: default categorical slots 1-2
@@ -30,8 +31,12 @@ meas["loss"] = meas.setting.str.split("/").str[1]
 meas = meas[meas.loss.isin(COL)]
 
 panels = [("auc_mean", "AUC (mean over 5 outer folds)", 1.0),
-          ("share_converters_newly_missed", "Identified converters lost (%)", 100.0)]
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "axes.edgecolor": MUTED,
+          ("share_converters_newly_missed", "Converters newly missed\n(% of all converters)", 100.0)]
+# serif Computer Modern (matplotlib's bundled cmr10) to match the dissertation body text
+plt.rcParams.update({"font.family": "serif", "font.serif": ["cmr10"], "mathtext.fontset": "cm",
+                     "axes.formatter.use_mathtext": True, "axes.unicode_minus": False,
+                     "pdf.fonttype": 42,  # embed TrueType, not Type 3
+                     "font.size": 9, "axes.edgecolor": MUTED,
                      "axes.labelcolor": INK, "xtick.color": MUTED, "ytick.color": MUTED})
 fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.9), constrained_layout=True)
 for ax, (col, ylab, k) in zip(axes, panels):
